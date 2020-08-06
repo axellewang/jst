@@ -26,7 +26,7 @@ class TestRun:
             process = self.run.run_item_order(t)
             file1 = self.assert_data.assert_item_data('订单号', i=t)
             allure.attach('记账科目')
-        print(file1)
+     #   print(file1)
         assert file1 == True
 
     @allure.feature('直销单出账测试')
@@ -35,7 +35,7 @@ class TestRun:
             process = self.run.run_dsl(t)
             file2 = self.assert_data.assert_dsl_data('订单号', i=t)
             allure.attach('直销单')
-        print(file2)
+      #  print(file2)
         assert file2 == True
 
     @allure.feature('微官网客房单出账测试')
@@ -44,7 +44,7 @@ class TestRun:
             process = self.run.run_micromall(t)
             file3 = self.assert_data.assert_micro_room_data('订单号', i=t)
             allure.attach('微官网客房单')
-        print(file3)
+      #  print(file3)
         assert file3 == True
 
     @allure.feature('微官网商品单出账测试')
@@ -53,7 +53,7 @@ class TestRun:
             process = self.run.run_micromall(t)
             file4 = self.assert_data.assert_micro_shop_data('订单号', i=t)
             allure.attach('微官网商品单')
-        print(file4)
+       # print(file4)
         assert file4 == True
 
 
@@ -61,19 +61,19 @@ class TestRun:
     def test_05(self, t=4):
         with allure.step('5号测试项'):
             process = self.run.run_travel(t)
-            file4 = self.assert_data.assert_travel_data('订单号', i=t)
+            file5 = self.assert_data.assert_travel_data('订单号', i=t)
             allure.attach('商旅订单')
-        print(file4)
-        assert file4 == True
+     #   print(file4)
+        assert file5 == True
 
     @allure.feature('礼包订单出账测试')
     def test_06(self, t=5):
         with allure.step('6号测试项'):
             process = self.run.run_gift(t)
-            file4 = self.assert_data.assert_gift_data('订单号', i=t)
+            file6 = self.assert_data.assert_gift_data('订单号', i=t)
             allure.attach('礼包订单')
-        print(file4)
-        assert file4 == True
+     #   print(file4)
+        assert file6 == True
 
 if __name__ == '__main__':
     pytest.main(['--alluredir','D:/PythonProject/jst/jst_rebuild/report/allure_raw/'])
