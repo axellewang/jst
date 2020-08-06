@@ -1,0 +1,87 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "foo.test_file",
+    "children" : [ {
+      "name" : "test_01",
+      "uid" : "b3f3d280121a12ae",
+      "parentUid" : "78a14651ede5c18c642dbabe46917dfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594588784,
+        "stop" : 1596594599404,
+        "duration" : 10620
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_02",
+      "uid" : "ccac7c8a0d38e1d0",
+      "parentUid" : "78a14651ede5c18c642dbabe46917dfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594599422,
+        "stop" : 1596594605000,
+        "duration" : 5578
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_03",
+      "uid" : "8efca7638449c17d",
+      "parentUid" : "78a14651ede5c18c642dbabe46917dfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594605029,
+        "stop" : 1596594616018,
+        "duration" : 10989
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_04",
+      "uid" : "df68ea0252bd050f",
+      "parentUid" : "78a14651ede5c18c642dbabe46917dfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594616055,
+        "stop" : 1596594627282,
+        "duration" : 11227
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_05",
+      "uid" : "c96dd94c8af67e0b",
+      "parentUid" : "78a14651ede5c18c642dbabe46917dfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594627319,
+        "stop" : 1596594633311,
+        "duration" : 5992
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_06",
+      "uid" : "7d39f417d09a8b87",
+      "parentUid" : "78a14651ede5c18c642dbabe46917dfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594633327,
+        "stop" : 1596594643333,
+        "duration" : 10006
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "foo.test_file"
+  } ]
+}

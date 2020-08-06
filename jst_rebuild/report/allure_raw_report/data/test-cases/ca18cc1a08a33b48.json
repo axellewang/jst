@@ -1,0 +1,128 @@
+{
+  "uid" : "ca18cc1a08a33b48",
+  "name" : "test_03",
+  "fullName" : "foo.test_file.TestRun#test_03",
+  "historyId" : "45d023b57f3d581b8c0e1d9c18586c30",
+  "time" : {
+    "start" : 1596532067691,
+    "stop" : 1596532078363,
+    "duration" : 10672
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False == True",
+  "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x000000000DDCF978>, t = 2\n\n    @allure.feature('微官网客房单出账测试')\n    def test_03(self, t=2):\n        with allure.step('3号测试项'):\n            process = self.run.run_dsl(t)\n            time.sleep(5)\n            file3 = self.assert_data.assert_micro_room_data('订单号', i=t)\n            allure.attach('微官网客房单')\n        print(file3)\n>       assert file3 == True\nE       assert False == True\n\ntest_file.py:51: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596532041034,
+      "stop" : 1596532041312,
+      "duration" : 278
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False == True",
+    "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x000000000DDCF978>, t = 2\n\n    @allure.feature('微官网客房单出账测试')\n    def test_03(self, t=2):\n        with allure.step('3号测试项'):\n            process = self.run.run_dsl(t)\n            time.sleep(5)\n            file3 = self.assert_data.assert_micro_room_data('订单号', i=t)\n            allure.attach('微官网客房单')\n        print(file3)\n>       assert file3 == True\nE       assert False == True\n\ntest_file.py:51: AssertionError",
+    "steps" : [ {
+      "name" : "3号测试项",
+      "time" : {
+        "start" : 1596532067691,
+        "stop" : 1596532078361,
+        "duration" : 10670
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "95953dc8c67dda7c",
+        "name" : "20816c76-69e9-4a3c-8194-76636d906ca0-attachment.attach",
+        "source" : "95953dc8c67dda7c.attach",
+        "type" : "text/plain",
+        "size" : 18
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "80d5ff411120f68d",
+      "name" : "stdout",
+      "source" : "80d5ff411120f68d.txt",
+      "type" : "text/plain",
+      "size" : 332
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596532105600,
+      "stop" : 1596532105600,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微官网客房单出账测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "14296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ca18cc1a08a33b48.json",
+  "parameterValues" : [ ]
+}

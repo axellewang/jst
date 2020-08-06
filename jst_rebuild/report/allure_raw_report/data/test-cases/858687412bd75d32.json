@@ -1,0 +1,124 @@
+{
+  "uid" : "858687412bd75d32",
+  "name" : "test_02",
+  "fullName" : "foo.test_file.TestRun#test_02",
+  "historyId" : "4d4bec4e34aa1dd6d18c18feb76ecd25",
+  "time" : {
+    "start" : 1596537739456,
+    "stop" : 1596537745043,
+    "duration" : 5587
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596537728606,
+      "stop" : 1596537728879,
+      "duration" : 273
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "2号测试项",
+      "time" : {
+        "start" : 1596537739456,
+        "stop" : 1596537745040,
+        "duration" : 5584
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b721adca7557ab64",
+        "name" : "368d84f6-9e18-43d3-87af-15209a535e95-attachment.attach",
+        "source" : "b721adca7557ab64.attach",
+        "type" : "text/plain",
+        "size" : 9
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "1ccb06ba961955e7",
+      "name" : "stdout",
+      "source" : "1ccb06ba961955e7.txt",
+      "type" : "text/plain",
+      "size" : 295
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596537773506,
+      "stop" : 1596537773507,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "直销单出账测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "11076-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "858687412bd75d32.json",
+  "parameterValues" : [ ]
+}

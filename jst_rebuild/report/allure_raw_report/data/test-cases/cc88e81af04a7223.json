@@ -1,0 +1,124 @@
+{
+  "uid" : "cc88e81af04a7223",
+  "name" : "test_05",
+  "fullName" : "foo.test_file.TestRun#test_05",
+  "historyId" : "c4bcfbe34473a25bab29b388523c3525",
+  "time" : {
+    "start" : 1596536834133,
+    "stop" : 1596536839992,
+    "duration" : 5859
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596536795467,
+      "stop" : 1596536795780,
+      "duration" : 313
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "5号测试项",
+      "time" : {
+        "start" : 1596536834133,
+        "stop" : 1596536839990,
+        "duration" : 5857
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4a2be6e820c70b89",
+        "name" : "a2c8bda4-cc9a-4414-a475-ecfe4ae7bdf2-attachment.attach",
+        "source" : "4a2be6e820c70b89.attach",
+        "type" : "text/plain",
+        "size" : 12
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "54a3b316fd8b753",
+      "name" : "stdout",
+      "source" : "54a3b316fd8b753.txt",
+      "type" : "text/plain",
+      "size" : 634
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596536840285,
+      "stop" : 1596536840285,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "商旅单出账测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "13964-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cc88e81af04a7223.json",
+  "parameterValues" : [ ]
+}

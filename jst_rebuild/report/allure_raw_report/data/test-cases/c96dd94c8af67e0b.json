@@ -1,0 +1,223 @@
+{
+  "uid" : "c96dd94c8af67e0b",
+  "name" : "test_05",
+  "fullName" : "foo.test_file.TestRun#test_05",
+  "historyId" : "c4bcfbe34473a25bab29b388523c3525",
+  "time" : {
+    "start" : 1596594627319,
+    "stop" : 1596594633311,
+    "duration" : 5992
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596594588442,
+      "stop" : 1596594588777,
+      "duration" : 335
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "5号测试项",
+      "time" : {
+        "start" : 1596594627319,
+        "stop" : 1596594633309,
+        "duration" : 5990
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e22355b3aa3752d2",
+        "name" : "cea7d3c2-ba52-486d-b801-ec7cc67ea51e-attachment.attach",
+        "source" : "e22355b3aa3752d2.attach",
+        "type" : "text/plain",
+        "size" : 12
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "58e9f9848af155f3",
+      "name" : "stdout",
+      "source" : "58e9f9848af155f3.txt",
+      "type" : "text/plain",
+      "size" : 634
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596594643334,
+      "stop" : 1596594643334,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "商旅单出账测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "13256-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2ed6af28126e95fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596537767288,
+        "stop" : 1596537773193,
+        "duration" : 5905
+      }
+    }, {
+      "uid" : "cc88e81af04a7223",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596536834133,
+        "stop" : 1596536839992,
+        "duration" : 5859
+      }
+    }, {
+      "uid" : "f6ad0fad1ff4924c",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 商旅单出账测试",
+      "time" : {
+        "start" : 1596536310988,
+        "stop" : 1596536310988,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "f101968897215d92",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 商旅单出账测试",
+      "time" : {
+        "start" : 1596536134437,
+        "stop" : 1596536134437,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2b431350c5ed3cc2",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 商旅单出账测试",
+      "time" : {
+        "start" : 1596535841216,
+        "stop" : 1596535841216,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "8b99a404dfd0a84b",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 商旅单出账测试",
+      "time" : {
+        "start" : 1596535359271,
+        "stop" : 1596535359271,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "d6bcccaf189526d5",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 商旅单出账测试",
+      "time" : {
+        "start" : 1596535053480,
+        "stop" : 1596535053480,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2539f95d0fdd83e8",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 商旅单出账测试",
+      "time" : {
+        "start" : 1596534891209,
+        "stop" : 1596534891209,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "e0cd20893af3649e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert False == True",
+      "time" : {
+        "start" : 1596533565119,
+        "stop" : 1596533576040,
+        "duration" : 10921
+      }
+    }, {
+      "uid" : "23776ecce7bf197e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert False == True",
+      "time" : {
+        "start" : 1596532094620,
+        "stop" : 1596532105529,
+        "duration" : 10909
+      }
+    }, {
+      "uid" : "215d7f240946514e",
+      "status" : "broken",
+      "statusDetails" : "ValueError: invalid literal for int() with base 10: ''",
+      "time" : {
+        "start" : 1596531905241,
+        "stop" : 1596531905278,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c96dd94c8af67e0b.json",
+  "parameterValues" : [ ]
+}

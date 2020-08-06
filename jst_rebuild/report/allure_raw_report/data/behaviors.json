@@ -1,0 +1,107 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "记账科目出账测试",
+    "children" : [ {
+      "name" : "test_01",
+      "uid" : "b3f3d280121a12ae",
+      "parentUid" : "79e8389ef6991468a307286b55f53230",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594588784,
+        "stop" : 1596594599404,
+        "duration" : 10620
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "79e8389ef6991468a307286b55f53230"
+  }, {
+    "name" : "直销单出账测试",
+    "children" : [ {
+      "name" : "test_02",
+      "uid" : "ccac7c8a0d38e1d0",
+      "parentUid" : "3e53555dfb104d275b37f5bde46c7ebc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594599422,
+        "stop" : 1596594605000,
+        "duration" : 5578
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3e53555dfb104d275b37f5bde46c7ebc"
+  }, {
+    "name" : "微官网客房单出账测试",
+    "children" : [ {
+      "name" : "test_03",
+      "uid" : "8efca7638449c17d",
+      "parentUid" : "966f9ff38de5252f7fa901f011fac4f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594605029,
+        "stop" : 1596594616018,
+        "duration" : 10989
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "966f9ff38de5252f7fa901f011fac4f9"
+  }, {
+    "name" : "微官网商品单出账测试",
+    "children" : [ {
+      "name" : "test_04",
+      "uid" : "df68ea0252bd050f",
+      "parentUid" : "9066891f5ff22c3edb1bca9b5c37b4dc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594616055,
+        "stop" : 1596594627282,
+        "duration" : 11227
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9066891f5ff22c3edb1bca9b5c37b4dc"
+  }, {
+    "name" : "商旅单出账测试",
+    "children" : [ {
+      "name" : "test_05",
+      "uid" : "c96dd94c8af67e0b",
+      "parentUid" : "f24d64aa982594b536061cf42cd03dff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594627319,
+        "stop" : 1596594633311,
+        "duration" : 5992
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f24d64aa982594b536061cf42cd03dff"
+  }, {
+    "name" : "礼包订单出账测试",
+    "children" : [ {
+      "name" : "test_06",
+      "uid" : "7d39f417d09a8b87",
+      "parentUid" : "b673c210ddbb8cad8216f1dfb1cd37f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596594633327,
+        "stop" : 1596594643333,
+        "duration" : 10006
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b673c210ddbb8cad8216f1dfb1cd37f4"
+  } ]
+}

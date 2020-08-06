@@ -1,0 +1,128 @@
+{
+  "uid" : "39bbe9d685b22f12",
+  "name" : "test_04",
+  "fullName" : "foo.test_file.TestRun#test_04",
+  "historyId" : "cee11bedccca754be3867d5a48d292d7",
+  "time" : {
+    "start" : 1596535042075,
+    "stop" : 1596535053446,
+    "duration" : 11371
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False == True",
+  "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x00000000036710B8>, t = 3\n\n    @allure.feature('微官网商品单出账测试')\n    def test_04(self, t=3):\n        with allure.step('4号测试项'):\n            process = self.run.run_micromall(t)\n            file4 = self.assert_data.assert_micro_shop_data('订单号', i=t)\n            allure.attach('微官网商品单')\n        print(file4)\n>       assert file4 == True\nE       assert False == True\n\ntest_file.py:57: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596535013333,
+      "stop" : 1596535013655,
+      "duration" : 322
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False == True",
+    "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x00000000036710B8>, t = 3\n\n    @allure.feature('微官网商品单出账测试')\n    def test_04(self, t=3):\n        with allure.step('4号测试项'):\n            process = self.run.run_micromall(t)\n            file4 = self.assert_data.assert_micro_shop_data('订单号', i=t)\n            allure.attach('微官网商品单')\n        print(file4)\n>       assert file4 == True\nE       assert False == True\n\ntest_file.py:57: AssertionError",
+    "steps" : [ {
+      "name" : "4号测试项",
+      "time" : {
+        "start" : 1596535042075,
+        "stop" : 1596535053444,
+        "duration" : 11369
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "720ef2c330cab471",
+        "name" : "d6b0777f-ffd4-446f-a338-7c42ab50aee0-attachment.attach",
+        "source" : "720ef2c330cab471.attach",
+        "type" : "text/plain",
+        "size" : 18
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "134b11f7686a69ea",
+      "name" : "stdout",
+      "source" : "134b11f7686a69ea.txt",
+      "type" : "text/plain",
+      "size" : 833
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596535053491,
+      "stop" : 1596535053492,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "微官网商品单出账测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "9844-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "39bbe9d685b22f12.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,118 @@
+{
+  "uid" : "80379f4fb700e5e4",
+  "name" : "test_02",
+  "fullName" : "foo.test_file.TestRun#test_02",
+  "historyId" : "4d4bec4e34aa1dd6d18c18feb76ecd25",
+  "time" : {
+    "start" : 1596531904925,
+    "stop" : 1596531904959,
+    "duration" : 34
+  },
+  "status" : "broken",
+  "statusMessage" : "ValueError: invalid literal for int() with base 10: ''",
+  "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x000000000DC88B38>, t = 1\n\n    @allure.feature('直销单出账测试')\n    def test_02(self,t=1):\n        with allure.step('2号测试项'):\n>           process = self.run.run_dsl(t)\n\ntest_file.py:36: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\scrpits\\run_demo.py:68: in run_dsl\n    insert_order = self.data.insertOrder(t)\n..\\scrpits\\date_scripts.py:102: in insertOrder\n    \"bookRate\": get_order.amount(),\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <jst_rebuild.data.order.order object at 0x000000000DC88CF8>\n\n    def amount(self):\n        amount = self.orderList['金额']\n>       return int(amount)*100\nE       ValueError: invalid literal for int() with base 10: ''\n\n..\\data\\order.py:113: ValueError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596531904289,
+      "stop" : 1596531904586,
+      "duration" : 297
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "ValueError: invalid literal for int() with base 10: ''",
+    "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x000000000DC88B38>, t = 1\n\n    @allure.feature('直销单出账测试')\n    def test_02(self,t=1):\n        with allure.step('2号测试项'):\n>           process = self.run.run_dsl(t)\n\ntest_file.py:36: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\scrpits\\run_demo.py:68: in run_dsl\n    insert_order = self.data.insertOrder(t)\n..\\scrpits\\date_scripts.py:102: in insertOrder\n    \"bookRate\": get_order.amount(),\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <jst_rebuild.data.order.order object at 0x000000000DC88CF8>\n\n    def amount(self):\n        amount = self.orderList['金额']\n>       return int(amount)*100\nE       ValueError: invalid literal for int() with base 10: ''\n\n..\\data\\order.py:113: ValueError",
+    "steps" : [ {
+      "name" : "2号测试项",
+      "time" : {
+        "start" : 1596531904925,
+        "stop" : 1596531904957,
+        "duration" : 32
+      },
+      "status" : "broken",
+      "statusMessage" : "ValueError: invalid literal for int() with base 10: ''\n",
+      "statusTrace" : "  File \"D:\\PythonProject\\jst\\jst_rebuild\\foo\\test_file.py\", line 36, in test_02\n    process = self.run.run_dsl(t)\n  File \"D:\\PythonProject\\jst\\jst_rebuild\\scrpits\\run_demo.py\", line 68, in run_dsl\n    insert_order = self.data.insertOrder(t)\n  File \"D:\\PythonProject\\jst\\jst_rebuild\\scrpits\\date_scripts.py\", line 102, in insertOrder\n    \"bookRate\": get_order.amount(),\n  File \"D:\\PythonProject\\jst\\jst_rebuild\\data\\order.py\", line 113, in amount\n    return int(amount)*100\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596531905409,
+      "stop" : 1596531905409,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "直销单出账测试"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "12216-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "80379f4fb700e5e4.json",
+  "parameterValues" : [ ]
+}

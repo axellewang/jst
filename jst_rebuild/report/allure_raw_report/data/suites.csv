@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Aug 05 10:30:33 CST 2020","Wed Aug 05 10:30:43 CST 2020","10006","foo","test_file","TestRun","","","test_06",""
+"passed","Wed Aug 05 10:30:16 CST 2020","Wed Aug 05 10:30:27 CST 2020","11227","foo","test_file","TestRun","","","test_04",""
+"passed","Wed Aug 05 10:29:48 CST 2020","Wed Aug 05 10:29:59 CST 2020","10620","foo","test_file","TestRun","","","test_01",""
+"passed","Wed Aug 05 10:30:05 CST 2020","Wed Aug 05 10:30:16 CST 2020","10989","foo","test_file","TestRun","","","test_03",""
+"passed","Wed Aug 05 10:30:27 CST 2020","Wed Aug 05 10:30:33 CST 2020","5992","foo","test_file","TestRun","","","test_05",""
+"passed","Wed Aug 05 10:29:59 CST 2020","Wed Aug 05 10:30:05 CST 2020","5578","foo","test_file","TestRun","","","test_02",""

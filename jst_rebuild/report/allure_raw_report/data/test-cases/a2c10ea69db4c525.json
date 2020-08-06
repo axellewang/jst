@@ -1,0 +1,89 @@
+{
+  "uid" : "a2c10ea69db4c525",
+  "name" : "test_04",
+  "fullName" : "foo.test_file.TestRun#test_04",
+  "historyId" : "cee11bedccca754be3867d5a48d292d7",
+  "time" : {
+    "start" : 1596536134128,
+    "stop" : 1596536134129,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: 微官网商品单出账测试",
+  "statusTrace" : "('foo\\\\test_file.py', 50, 'Skipped: 微官网商品单出账测试')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596536065999,
+      "stop" : 1596536066310,
+      "duration" : 311
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596536134867,
+      "stop" : 1596536134906,
+      "duration" : 39
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip('微官网商品单出账测试')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "14024-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.skip('微官网商品单出账测试')" ]
+  },
+  "source" : "a2c10ea69db4c525.json",
+  "parameterValues" : [ ]
+}

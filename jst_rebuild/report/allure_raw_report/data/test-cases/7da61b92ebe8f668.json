@@ -1,0 +1,107 @@
+{
+  "uid" : "7da61b92ebe8f668",
+  "name" : "test_01",
+  "fullName" : "foo.test_file.TestRun#test_01",
+  "historyId" : "0148ccc8208be825f7d07a3d35e8d366",
+  "time" : {
+    "start" : 1596523339330,
+    "stop" : 1596523339331,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 5 == 4",
+  "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x0000000005171C50>\n\n    @allure.feature('测试1号')\n    def test_01(self):\n        a= 5\n        b= 4\n>       assert  a==b\nE       assert 5 == 4\n\ntest_file.py:25: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1596523339325,
+      "stop" : 1596523339325,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 5 == 4",
+    "statusTrace" : "self = <jst_rebuild.foo.test_file.TestRun object at 0x0000000005171C50>\n\n    @allure.feature('测试1号')\n    def test_01(self):\n        a= 5\n        b= 4\n>       assert  a==b\nE       assert 5 == 4\n\ntest_file.py:25: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e3c0096ff60346a1",
+      "name" : "stdout",
+      "source" : "e3c0096ff60346a1.txt",
+      "type" : "text/plain",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1596523339540,
+      "stop" : 1596523339540,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试1号"
+  }, {
+    "name" : "parentSuite",
+    "value" : "foo"
+  }, {
+    "name" : "suite",
+    "value" : "test_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRun"
+  }, {
+    "name" : "host",
+    "value" : "WangLiu"
+  }, {
+    "name" : "thread",
+    "value" : "12672-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "foo.test_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7da61b92ebe8f668.json",
+  "parameterValues" : [ ]
+}
