@@ -16,7 +16,7 @@ class folio_order:
     def hotelCode(self):
         hotelCode = self.folioList['酒店号']
         if type(hotelCode) is float:
-            return math.trunc(hotelCode)
+            return str(math.trunc(hotelCode))
         else:
             return str(hotelCode)
     def end_of_day(self):
@@ -77,6 +77,6 @@ class folio_order:
 
 
 if __name__ == '__main__':
-    t = folio_order(file_add='D:\测试\测试内容\结算\测试excel数据\房单数据.xlsx')
+    t = folio_order(file_add='../file/房单数据.xlsx')
     t.folioInfo(0)
-    print(t.hotelCode())
+    print(type(t.hotelCode()))

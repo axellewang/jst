@@ -1,7 +1,7 @@
 from jst_rebuild.data.order import order
 from database.mongounit import Mongounit
 from common_script import xlsx_operator
-from common_script.time_opt import timestamp,inDate,timestrf,millionstamp,secondstamp
+from common_script.time_opt import timestamp,inDate,timestrf,millionstamp,secondstamp,get_utc_time
 import pprint
 from dateutil import  parser
 from jst_rebuild.data.folio_order import folio_order
@@ -46,9 +46,9 @@ class date_demo:
         defaultorder = int(self.deafultorder)
         self.orderList.append(defaultorder)
         get_order = order(self.file_add, db=self.mysql)
-        while i < 1 :
-            orderinfo = get_order.orderinfo(t)
-            orderNumber = defaultorder +t
+        while i < 400 :
+            orderinfo = get_order.orderinfo(0)
+            orderNumber = defaultorder +i
             hotelcode = get_order.hotelCode()
           #  print('订单号：%s'%orderNumber)
             '''
@@ -85,7 +85,7 @@ class date_demo:
 
             data = ({
                              "_id": get_order.hotelCode()+'-'+str(orderNumber)+'-'+str(get_order.orderStatus()),
-                            "guid": int(MySnow().get_id())+t,  # 雪花算法获得guid
+                            "guid": int(MySnow().get_id())+i,  # 雪花算法获得guid
                             "orderCode": str(orderNumber),
                             "originalOrderCode": str(orderNumber),
                             "thirdOrderCode": str(orderNumber),
@@ -136,12 +136,12 @@ class date_demo:
                                 }
                             ],
                             "refundPayments":  refund,
-                            "createTime": get_order.arrDate(),
-                            "updateTime":  get_order.arrDate(),
-                            "terminateState": 0,
+                            "createTime": parser.parse(get_utc_time()),
+                            "updateTime":   parser.parse(get_utc_time()),
+                            "terminateState": 4,
                             "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.Order"
                         })
-        #    pprint.pprint(data)
+         #   pprint.pprint(data)
             self.mongo.change_collection('order').insert_one(data)
             print('插入数据成功，订单号： %s'%orderNumber)
          #   print('订单orderNum%s'%orderNumber)
@@ -156,15 +156,15 @@ class date_demo:
         i = 0
         defaultfolio = int(self.defaultfolio)
         self.folioList.append(defaultfolio)
-        while i < 1:
+        while i < 400:
             get_folio = folio_order(self.file_add2)
-            folioNum = defaultfolio + t
+            folioNum = defaultfolio + i
          #   print('房单%s' % folioNum)
 
-            getfolioList = get_folio.folioInfo(t)
+            getfolioList = get_folio.folioInfo(0)
             data = {
                     "_id":str(get_folio.hotelCode())+"-"+str(folioNum)+"-"+str(get_folio.folioState()) ,
-                    "guid": int(MySnow().get_id())+t, #雪花算法获得guid
+                    "guid": int(MySnow().get_id())+i, #雪花算法获得guid
                     "weHotelCode": get_folio.hotelCode(),
                     "folioId": str(folioNum),
                     "endOfDay": parser.parse(timestrf(get_folio.end_of_day())),
@@ -181,9 +181,9 @@ class date_demo:
                     "pmsRoomFee":get_folio.actualRate(),
                     "realRn": get_folio.realRn(),
                     "dataSource": "jrez",
-                    "createTime": parser.parse(timestrf(get_folio.arrDate())),
-                    "updateTime": parser.parse(timestrf(get_folio.arrDate())),
-                    "terminateState": 0,
+                    "createTime": parser.parse(get_utc_time()),
+                    "updateTime": parser.parse(get_utc_time()),
+                    "terminateState": 4,
                     "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.FolioOrder"
                 }
             if get_folio.isoffline() == False:
@@ -206,17 +206,17 @@ class date_demo:
     def insert_item(self,t=None):
         i=0
         defaultfolioNum = self.folioList[0]
-        while i < 1:
+        while i < 400:
             item = item_order(self.file_add3)
-            getitemList = item.itemInfo(t)
+            getitemList = item.itemInfo(0)
             itemOrderNum = defaultfolioNum + i
        #     print('记账科目房单%s' %itemOrderNum)
 
             get_folio = folio_order(self.file_add2)
-            getfolioList = get_folio.folioInfo(t)
+            getfolioList = get_folio.folioInfo(0)
             data = {
                 "_id": item.hotelCode() + "-" + str(itemOrderNum),
-                "guid": int(MySnow().get_id())+t, #雪花算法获得guid
+                "guid": int(MySnow().get_id())+i, #雪花算法获得guid
                 "transId": str(itemOrderNum),
                 "originalTransId": str(itemOrderNum),
                 "endOfDay": parser.parse(timestrf(item.eod())),
@@ -235,9 +235,9 @@ class date_demo:
                 "depDate": parser.parse(timestrf(get_folio.depDate())),
                 "orderCode": '',
                 "sourceType": get_folio.sourceType(),
-                "createTime": parser.parse(timestrf(get_folio.arrDate())),
-                "updateTime": parser.parse(timestrf(get_folio.arrDate())),
-                "terminateState": 0,
+                "createTime": parser.parse(get_utc_time()),
+                "updateTime": parser.parse(get_utc_time()),
+                "terminateState": 4,
                 "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.ItemOrder"
             }
             if get_folio.isoffline() == False:
@@ -335,7 +335,7 @@ class date_demo:
 
 
 if __name__ == '__main__':
-    db = date_demo(mongo='mongo_slices',mysql='breeze_rules_db',
+    db = date_demo(mongo='jst_order_service_test',mysql='breeze_rules_db',
                    order_file='../file/订单数据.xlsx',
                    folio_file='../file/房单数据.xlsx',
                    item_file='../file/记账科目数据.xlsx',
@@ -345,11 +345,11 @@ if __name__ == '__main__':
     #threading._start_new_thread(db.insertOrder(), ("Thread-2", 4,))
    # threading._start_new_thread(db.insertFolio(), ("Thread-1", 2,))
     #threading._start_new_thread(db.insertFolio(), ("Thread-2", 4,))
-    db.insertOrder(t=0)
-    db.insertFolio(t=0)
+    db.insertOrder()
+    db.insertFolio()
   #  db.insert_micromall()
-  #  db.insert_item()
+    db.insert_item()
   #  db.mk_data()
-    print(db.mk_data())
+  #  print(db.mk_data())
 
 
