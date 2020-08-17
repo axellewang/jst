@@ -74,7 +74,7 @@ def get_utc_time():
     ct = time.time()
     data_secs = (ct - int(ct)) * 1000
     utc_time = "%s.%03d"%(data_head,data_secs)
-
+    print(1)
     return utc_time
 
 
