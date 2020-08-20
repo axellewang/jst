@@ -26,7 +26,7 @@ def application(environ, start_response):
 
         # 组成一个数组，数组中只有一个字典
 
-        dic = {"success":"true","msg":"daf","data":{"status":"1"}}
+        dic = {"success":"null","msg":"daf","data":{"status":"1"}}
 
         return [json.dumps(dic).encode('utf-8')]
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
         port = 5088
 
-        httpd = make_server("172.21.222.74", port, application)
+        httpd = make_server("172.21.230.199", port, application)
 
        # print("serving http on port {port1}...").format(po)
 

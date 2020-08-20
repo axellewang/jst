@@ -28,7 +28,7 @@ class Assert:
                 print('失败')
                 return False
         else:
-            print('bbb')
+         #   print('bbb')
             return False
 
 # 查询分销账单

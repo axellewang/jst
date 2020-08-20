@@ -46,8 +46,8 @@ class date_demo:
         defaultorder = int(self.deafultorder)
         self.orderList.append(defaultorder)
         get_order = order(self.file_add, db=self.mysql)
-        while i < 400 :
-            orderinfo = get_order.orderinfo(0)
+        while i < 1 :
+            orderinfo = get_order.orderinfo(i)
             orderNumber = defaultorder +i
             hotelcode = get_order.hotelCode()
           #  print('订单号：%s'%orderNumber)
@@ -138,7 +138,7 @@ class date_demo:
                             "refundPayments":  refund,
                             "createTime": parser.parse(get_utc_time()),
                             "updateTime":   parser.parse(get_utc_time()),
-                            "terminateState": 4,
+                            "terminateState": 0,
                             "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.Order"
                         })
          #   pprint.pprint(data)
@@ -156,7 +156,7 @@ class date_demo:
         i = 0
         defaultfolio = int(self.defaultfolio)
         self.folioList.append(defaultfolio)
-        while i < 400:
+        while i < 1:
             get_folio = folio_order(self.file_add2)
             folioNum = defaultfolio + i
          #   print('房单%s' % folioNum)
@@ -183,7 +183,7 @@ class date_demo:
                     "dataSource": "jrez",
                     "createTime": parser.parse(get_utc_time()),
                     "updateTime": parser.parse(get_utc_time()),
-                    "terminateState": 4,
+                    "terminateState": 0,
                     "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.FolioOrder"
                 }
             if get_folio.isoffline() == False:
@@ -206,14 +206,14 @@ class date_demo:
     def insert_item(self,t=None):
         i=0
         defaultfolioNum = self.folioList[0]
-        while i < 400:
+        while i < 1:
             item = item_order(self.file_add3)
-            getitemList = item.itemInfo(0)
+            getitemList = item.itemInfo(i)
             itemOrderNum = defaultfolioNum + i
        #     print('记账科目房单%s' %itemOrderNum)
 
             get_folio = folio_order(self.file_add2)
-            getfolioList = get_folio.folioInfo(0)
+            getfolioList = get_folio.folioInfo(i)
             data = {
                 "_id": item.hotelCode() + "-" + str(itemOrderNum),
                 "guid": int(MySnow().get_id())+i, #雪花算法获得guid
@@ -237,7 +237,7 @@ class date_demo:
                 "sourceType": get_folio.sourceType(),
                 "createTime": parser.parse(get_utc_time()),
                 "updateTime": parser.parse(get_utc_time()),
-                "terminateState": 4,
+                "terminateState": 0,
                 "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.ItemOrder"
             }
             if get_folio.isoffline() == False:
