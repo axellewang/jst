@@ -12,7 +12,7 @@ class getTableName():
 
         url = 'http://172.25.33.1:30547/getBillItemDetailTableName/'+str(wehotelCode)
         req = requests.get(url=url)
-    #    print(req.text)
+   #     print(req.text)
         return req.text
 
 #查询直销服务费账单酒店归属表
@@ -62,6 +62,7 @@ class getTableName():
 if __name__ == '__main__':
     testmoudle = getTableName()
  #   testmoudle.getTable(file_add='D:\hotelcode.xlsx')
-    testmoudle.getGiftTable(hotelCode='5353')
+ #   testmoudle.getGiftTable(hotelCode='5353')
    # testmoudle.getDslTable(hotelCode='5353')
   #  testmoudle.test_module(weHotelCode='3564',dividedNum=121)
+    testmoudle.getItemTable(wehotelCode='5353')

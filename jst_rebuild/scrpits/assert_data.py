@@ -101,12 +101,12 @@ class Assert:
         if assert_data is not None:
             assert_data2 = assert_data[0]
             if str(assert_data2) == source_data:
-                print(1)
+            #    print(1)
                 return True
             else:
                 return False
         else:
-            print(2)
+         #   print(2)
             return False
 
 # 查询微官网商品单
@@ -160,6 +160,22 @@ class Assert:
                 return False
         else:
             return False
+
+    def assert_score_data(self,columnName,i):
+        #这里是查询oracle对应出账账单是否存在，并作出断言
+        source_data = xlsx_operator.Operator(self.file_add).read_by_indexName(columnName=columnName)[i]
+        sql = "select ORDER_CODE from T_SCORE_BILL_RESERVATION where ORDER_CODE = '{order_code}'".format(order_code=source_data)
+        req = self.cursor.execute(sql)
+        assert_data = self.cursor.fetchone()
+        if assert_data is not None:
+            assert_data2 =  assert_data[0]
+            if str(assert_data2) == source_data:
+                return True
+            else:
+                return False
+        else:
+            return False
+
 
 
 

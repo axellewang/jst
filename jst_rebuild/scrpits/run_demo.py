@@ -19,10 +19,10 @@ class run_demo:
         self.task = order_task.order_task()
         self.order = order(db = self.mysql,file_add=order_address)
         self.assert_data = assert_data.Assert(dbname=oracle,file_address=write_file)
-    def run_item_order(self,t):
-        insert_order = self.data.insertOrder(t)
-        insert_folio = self.data.insertFolio(t)
-        insert_item = self.data.insert_item(t)
+    def run_item_order(self):
+        insert_order = self.data.insertOrder()
+        insert_folio = self.data.insertFolio()
+        insert_item = self.data.insert_item()
         mk_data = self.data.mk_data()
         orders = mk_data[0]
         hotelCodes = mk_data[1]
@@ -30,10 +30,10 @@ class run_demo:
         items = mk_data[3]
         i = 0
         j = 0
-     #   clear_date = self.write_xls.delete_table()
-        write_order = self.write_xls.write_data(sheet_name='Sheet1',col_name='订单号',value=orders[t])
-        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes[t])
-        write_folio = self.write_xls.write_data(sheet_name='Sheet1', col_name='房单号', value=folios[t])
+        clear_date = self.write_xls.delete_table()
+        write_order = self.write_xls.write_data(sheet_name='Sheet1',col_name='订单号',value=orders)
+        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes)
+        write_folio = self.write_xls.write_data(sheet_name='Sheet1', col_name='房单号', value=folios)
       #  write_item = self.write_xls.write_data(sheet_name='Sheet1', col_name='记账科目交易号', value=items)
         while i < len(orders):
          #   print("测试数据："+ str(orders[i]),(hotelCodes[i]),str(folios[i]),str(items[i]))
@@ -64,7 +64,7 @@ class run_demo:
             print('订单%s推送成功' % folios[i])
             i += 1
 
-    def run_dsl(self,t):
+    def run_dsl(self):
         insert_order = self.data.insertOrder(t)
         insert_folio = self.data.insertFolio(t)
         mk_data = self.data.mk_data()
@@ -74,12 +74,12 @@ class run_demo:
         folios = mk_data[2]
         i = 0
         j = 0
-     #   claer_data = self.write_xls.delete_table()
-        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders[t])
+        claer_data = self.write_xls.delete_table()
+        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders)
      #   print('订单数据excel写入完成')
-        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes[t])
+        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes)
      #   print('酒店数据excel写入完成')
-        write_folio = self.write_xls.write_data(sheet_name='Sheet1', col_name='房单号', value=folios[t])
+        write_folio = self.write_xls.write_data(sheet_name='Sheet1', col_name='房单号', value=folios)
     #    print('房单数据excel写入完成')
 
         while i < len(orders):
@@ -136,20 +136,20 @@ class run_demo:
 
 
 
-    def run_micromall(self,t):
-        insert_order = self.data.insertOrder(t)
-        insert_micro = self.data.insert_micromall(t)
-        insert_folio = self.data.insertFolio(t)
+    def run_micromall(self,t=None):
+        insert_order = self.data.insertOrder()
+        insert_micro = self.data.insert_micromall()
+        insert_folio = self.data.insertFolio()
         mk_data = self.data.mk_data()
         orders = mk_data[0]
         #   print(orders)
         hotelCodes = mk_data[1]
         i = 0
         j = 0
-      #  clear_data = self.write_xls.delete_table()
-        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders[t])
+        clear_data = self.write_xls.delete_table()
+        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders[i])
         print('订单数据excel写入完成')
-        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes[t])
+        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes[i])
         print('酒店数据excel写入完成')
 
         while i < len(orders):
@@ -211,9 +211,9 @@ class run_demo:
 
 
 
-    def run_travel(self,t):
-        insert_order = self.data.insertOrder(t)
-        insert_folio = self.data.insertFolio(t)
+    def run_travel(self):
+        insert_order = self.data.insertOrder()
+        insert_folio = self.data.insertFolio()
         mk_data = self.data.mk_data()
         orders = mk_data[0]
      #   print(orders)
@@ -221,10 +221,10 @@ class run_demo:
         folios = mk_data[2]
         i = 0
         j = 0
-    #    clear_file = self.write_xls.delete_table()
-        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders[t])
+        clear_file = self.write_xls.delete_table()
+        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders)
         print('订单数据excel写入完成')
-        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes[t])
+        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes)
         print('酒店数据excel写入完成')
 
         while i < len(orders):
@@ -244,6 +244,40 @@ class run_demo:
                 print('订单%s出账失败' % orders[j])
             j += 1
 
+    def run_score(self):
+        insert_order = self.data.insertOrder()
+        insert_folio = self.data.insertFolio()
+        insert_score = self.data.insert_score()
+        mk_data = self.data.mk_data()
+        orders = mk_data[0]
+        #   print(orders)
+        hotelCodes = mk_data[1]
+        folios = mk_data[2]
+        i = 0
+        j = 0
+        clear_file = self.write_xls.delete_table()
+        write_order = self.write_xls.write_data(sheet_name='Sheet1', col_name='订单号', value=orders)
+        print('订单数据excel写入完成')
+        write_hotel = self.write_xls.write_data(sheet_name='Sheet1', col_name='酒店号', value=hotelCodes)
+        print('酒店数据excel写入完成')
+
+        while i < len(orders):
+            req = self.task.push_order(hotelCode=hotelCodes[i], orderCode=orders[i])
+            print(hotelCodes[i], orders[i])
+            print('订单%s推送成功' % orders[i])
+            i += 1
+
+        time.sleep(5)
+        while j < len(orders):
+            data_a = self.assert_data.assert_score_data(columnName='订单号', i=j)
+            if data_a is True:
+                self.write_xls.write_data(sheet_name='Sheet1', col_name='积分出账结果', value='成功')
+                print('订单%s出账成功' % orders[j])
+            else:
+                self.write_xls.write_data(sheet_name='Sheet1', col_name='积分出账结果', value='失败')
+                print('订单%s出账失败' % orders[j])
+            j += 1
+
 
 if __name__ == '__main__':
     t = run_demo(mongo='jst_order_service_test',mysql='breeze_rules_db',
@@ -253,11 +287,11 @@ if __name__ == '__main__':
                  gift_address='../file/礼包数据.xlsx',
                  write_file='../file/出账订单&房单号.xlsx',
                  oracle='uat-jstorder')
-    t.run_micromall(t=3)
+  #  t.run_micromall()
   #  t.run_gift()
-  #  t.run_item_order()
-#    t.run_dsl()
- #   t.run_travel()
+    t.run_item_order()
+  #  t.run_dsl()
+  #  t.run_travel()
 
 
 

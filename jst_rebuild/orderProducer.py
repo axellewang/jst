@@ -18,12 +18,12 @@ class orderProducer:
         formattime = datetime.datetime.strftime(now, '%Y-%m-%d %H:%M:%S')
         data = json.dumps({
         "orderCode": orderCode,
-        "orderState": 4,
+        "orderState": 5,
         "sendTime": formattime,
-        "innId": "JJ1090",
+        "innId": "JJ69876",
         "innName": "锦江都城齐程标准酒店",
         "sourceType": 501,
-        "payState": 0,
+        "payState": 1,
         "payType": 0,
         "roomTypeId": "DD",
         "roomTypeName": "商务房A",
@@ -77,7 +77,7 @@ class orderProducer:
 
 if __name__ =='__main__':
     producer = orderProducer('172.25.33.84:9092','tpOrderBalanceInfo.test')
-    producer.producer(orderCode='101004084173',mebId=181824103)
+    producer.producer(orderCode='204519021510',mebId=268622188)
 
 
 

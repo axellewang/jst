@@ -62,9 +62,19 @@ class order_task:
         req = requests.post(url=url, headers=header, data=data)
         print(req.text)
 
+    def push_scoreOrder(self,hotelCode):
+        url = 'http://172.25.33.1:30559/score_patch/pushBatchScoreOrderByReq'
+        header = {"Content-Type": "application/json"}
+        data = json.dumps({
+              "terminateStates": [0],
+               "weHotelCodes": [hotelCode]
+            })
+        req = requests.post(url=url, headers=header, data=data)
+        print(req.text)
 if __name__ == '__main__':
     t = order_task()
- #   t.push_item_order(hotelCode='5353',orderCode='170604081011',folioId='170604081',transId="170604081")
+   # t.push_item_order(hotelCode='5353',orderCode='211469921011',folioId='211469921',transId="211469922")
    # t.push_micromall(hotelCode='JJ69876',orderCode='182024351012')
-   # t.push_order(hotelCode='JJ1058',orderCode='163812461012')
-    t.push_WhFeeOrder(hotelCode='5353')
+  #  t.push_order(hotelCode='5353',orderCode='212320531011')
+    #t.push_WhFeeOrder(hotelCode='5353')
+    t.push_scoreOrder(hotelCode='5353')

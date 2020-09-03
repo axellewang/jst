@@ -46,8 +46,8 @@ class date_demo:
         defaultorder = int(self.deafultorder)
         self.orderList.append(defaultorder)
         get_order = order(self.file_add, db=self.mysql)
-        while i < 400 :
-            orderinfo = get_order.orderinfo(0)
+        while i < self.rows1 :
+            orderinfo = get_order.orderinfo(i)
             orderNumber = defaultorder +i
             hotelcode = get_order.hotelCode()
           #  print('订单号：%s'%orderNumber)
@@ -138,7 +138,7 @@ class date_demo:
                             "refundPayments":  refund,
                             "createTime": parser.parse(get_utc_time()),
                             "updateTime":   parser.parse(get_utc_time()),
-                            "terminateState": 4,
+                            "terminateState": 0,
                             "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.Order"
                         })
          #   pprint.pprint(data)
@@ -156,12 +156,12 @@ class date_demo:
         i = 0
         defaultfolio = int(self.defaultfolio)
         self.folioList.append(defaultfolio)
-        while i < 400:
+        while i < self.rows2:
             get_folio = folio_order(self.file_add2)
             folioNum = defaultfolio + i
          #   print('房单%s' % folioNum)
 
-            getfolioList = get_folio.folioInfo(0)
+            getfolioList = get_folio.folioInfo(i)
             data = {
                     "_id":str(get_folio.hotelCode())+"-"+str(folioNum)+"-"+str(get_folio.folioState()) ,
                     "guid": int(MySnow().get_id())+i, #雪花算法获得guid
@@ -183,7 +183,7 @@ class date_demo:
                     "dataSource": "jrez",
                     "createTime": parser.parse(get_utc_time()),
                     "updateTime": parser.parse(get_utc_time()),
-                    "terminateState": 4,
+                    "terminateState": 0,
                     "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.FolioOrder"
                 }
             if get_folio.isoffline() == False:
@@ -206,14 +206,14 @@ class date_demo:
     def insert_item(self,t=None):
         i=0
         defaultfolioNum = self.folioList[0]
-        while i < 400:
+        while i < self.rows3:
             item = item_order(self.file_add3)
-            getitemList = item.itemInfo(0)
+            getitemList = item.itemInfo(i)
             itemOrderNum = defaultfolioNum + i
        #     print('记账科目房单%s' %itemOrderNum)
 
             get_folio = folio_order(self.file_add2)
-            getfolioList = get_folio.folioInfo(0)
+            getfolioList = get_folio.folioInfo(i)
             data = {
                 "_id": item.hotelCode() + "-" + str(itemOrderNum),
                 "guid": int(MySnow().get_id())+i, #雪花算法获得guid
@@ -237,7 +237,7 @@ class date_demo:
                 "sourceType": get_folio.sourceType(),
                 "createTime": parser.parse(get_utc_time()),
                 "updateTime": parser.parse(get_utc_time()),
-                "terminateState": 4,
+                "terminateState": 0,
                 "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.ItemOrder"
             }
             if get_folio.isoffline() == False:
@@ -257,13 +257,13 @@ class date_demo:
     def insert_micromall(self,t=None):
         i = 0
         get_order = order(self.file_add, db=self.mysql)
-        while i < 1:
-            orderinfo = get_order.orderinfo(t)
-            orderNumber = self.orderList[0] + t
+        while i < self.rows1:
+            orderinfo = get_order.orderinfo(i)
+            orderNumber = self.orderList[0] + i
             hotelcode = get_order.hotelCode()
             data = {
                 "_id": get_order.hotelCode()+'-'+str(orderNumber)+'-'+str(get_order.orderStatus()),
-                "guid": int(MySnow().get_id())+t,
+                "guid": int(MySnow().get_id())+i,
                 "weHotelCode": get_order.hotelCode(),
                 "hotelName": get_order.hotelName(),
                 "orderCode": str(orderNumber),
@@ -328,6 +328,45 @@ class date_demo:
             self.mk_hotel.append(hotelcode)
             i+=1
 
+    def insert_score(self):
+        i = 0
+        defaultfolioNum = self.folioList[0]
+        while i < self.rows1:
+            get_order = order(self.file_add,db=self.mysql)
+            folioNum = defaultfolioNum + i
+            orderNum = self.orderList[0] + i
+            #   print('房单%s' % folioNum)
+
+            getorderlist = get_order.orderinfo(i)
+            data = {
+                    "_id": str(get_order.hotelCode())+'-'+str(orderNum),
+                    "guid": int(MySnow().get_id())+i,
+                    "weHotelCode":str(get_order.hotelCode()),
+                    "orderCode": str(orderNum),
+                    "crsFolioId":int(folioNum),
+                    "pmsFolioId": "",
+                    "remark": "",
+                    "roomNight": get_order.actualRn(),
+                    "weHotelName": get_order.hotelName(),
+                    "brandCode":get_order.brandCode(),
+                    "brandName":'test',
+                    "checkInCardNo": "88117045",
+                    "sendPointTime": get_order.actualDepDate(),
+                    "settlementAmount": int(get_order.amount()),
+                    "createTime": parser.parse(get_utc_time()),
+                    "updateTime": parser.parse(get_utc_time()),
+                    "totalAmount":int(get_order.amount()),
+                    "scoreId": int("8931340"),
+                    "terminateState": int("0"),
+                    "orderCate": "SCORE",
+                    "pushFrequency": int("0"),
+                    "_class": "com.wehotelglobal.jst.orderservice.repo.mongo.ScoreOrder"
+                }
+            self.mongo.change_collection('score_order').insert_one(data)
+
+            print('插入数据成功,订单号： %s' % orderNum)
+            i += 1
+        print('积分数据插入完成，总数%d' % i)
 
     def mk_data(self):
     #    print(self.mk_order,'\n', self.mk_hotel,'\n',self.mk_folio,'\n',self.mk_item)
@@ -348,8 +387,9 @@ if __name__ == '__main__':
     db.insertOrder()
     db.insertFolio()
   #  db.insert_micromall()
-    db.insert_item()
+  #  db.insert_item()
   #  db.mk_data()
   #  print(db.mk_data())
+    db.insert_score()
 
 
