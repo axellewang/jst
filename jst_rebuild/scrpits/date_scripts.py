@@ -366,7 +366,7 @@ class date_demo:
 
             print('插入数据成功,订单号： %s' % orderNum)
             i += 1
-        print('积分数据插入完成，总数%d' % i)
+        print('积分数据插入完成，总数%d' % i )
 
     def mk_data(self):
     #    print(self.mk_order,'\n', self.mk_hotel,'\n',self.mk_folio,'\n',self.mk_item)
@@ -391,5 +391,6 @@ if __name__ == '__main__':
   #  db.mk_data()
   #  print(db.mk_data())
     db.insert_score()
+
 
 
